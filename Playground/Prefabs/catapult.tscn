@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://byuup2ujox6f4"]
+
+[ext_resource type="Script" path="res://addons/playground/Scripts/Catapult.cs" id="1_ekcng"]
+[ext_resource type="Texture2D" uid="uid://dasgxg88s7omk" path="res://Playground/2D Assets/item_hatTop.png" id="2_p1ase"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcqjs"]
+size = Vector2(79, 22)
+
+[node name="Catapult" type="Area2D"]
+script = ExtResource("1_ekcng")
+catapultForce = -1000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -10)
+shape = SubResource("RectangleShape2D_jcqjs")
+
+[node name="ItemHatTop" type="Sprite2D" parent="."]
+position = Vector2(-1, -10)
+scale = Vector2(1, 0.36)
+texture = ExtResource("2_p1ase")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxht2vu8swlj4"]
+
+[ext_resource type="Texture2D" uid="uid://b8s48fvr7m4or" path="res://Playground/2D Assets/effect_blastLarge.png" id="1_cmss1"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/TorqueMove.cs" id="2_b26qv"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/DestroyAfterSeconds.cs" id="3_o8mbc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yuqqi"]
+radius = 60.0083
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(-52, 341)
+
+[node name="EffectBlastLarge" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_cmss1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yuqqi")
+
+[node name="TorqueMove" type="Node2D" parent="."]
+script = ExtResource("2_b26qv")
+
+[node name="DestroyAfterDelay" type="Node2D" parent="."]
+script = ExtResource("3_o8mbc")
+delay = 5.0

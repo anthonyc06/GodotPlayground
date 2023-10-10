@@ -1,0 +1,347 @@
+[gd_scene load_steps=26 format=3 uid="uid://cvyigkv2x3dgw"]
+
+[ext_resource type="PackedScene" uid="uid://d2tofnhf8kxdy" path="res://Playground/Prefabs/bloc_grass.tscn" id="1_rfam5"]
+[ext_resource type="PackedScene" uid="uid://voi1talcn0g1" path="res://Playground/Prefabs/bloc.tscn" id="2_n5sba"]
+[ext_resource type="PackedScene" uid="uid://cg6jy830b0gr2" path="res://Playground/Prefabs/spikes.tscn" id="3_sns7q"]
+[ext_resource type="PackedScene" uid="uid://ccu7eno2lwp05" path="res://Playground/Prefabs/player.tscn" id="4_2yav0"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/SimpleMove.cs" id="5_h3qou"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/Flip.cs" id="5_ltuqa"]
+[ext_resource type="Texture2D" uid="uid://dl1hbosxfyf1i" path="res://Playground/2D Assets/item_gun.png" id="6_8vhot"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/Follow.cs" id="6_bmhri"]
+[ext_resource type="Texture2D" uid="uid://b40g3ahpi1t53" path="res://Playground/2D Assets/item_arrow.png" id="7_msmbw"]
+[ext_resource type="Texture2D" uid="uid://d0ulgyelo0aau" path="res://Playground/2D Assets/tile_cog.png" id="7_t1lhb"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/Shooter.cs" id="7_tj5hi"]
+[ext_resource type="PackedScene" uid="uid://b60ju8pqirm7n" path="res://Playground/Prefabs/bullet.tscn" id="8_ggb5x"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/AutoMove.cs" id="8_lxjqk"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/AutoRotate.cs" id="10_n11lv"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/DestroyAfterSeconds.cs" id="11_dmxtf"]
+[ext_resource type="Texture2D" uid="uid://dp11yxu0r4r7b" path="res://Playground/2D Assets/character_roundPurple.png" id="11_o05i6"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/Patrol.cs" id="12_bxe24"]
+[ext_resource type="PackedScene" uid="uid://dxht2vu8swlj4" path="res://Playground/Prefabs/RollingStone.tscn" id="13_iursp"]
+[ext_resource type="Script" path="res://addons/playground/Scripts/SpawnRepeating.cs" id="14_mq26o"]
+[ext_resource type="Script" path="res://addons/playground/Conditions/ConditionAreaEntered.cs" id="17_8qxhm"]
+[ext_resource type="Script" path="res://addons/playground/Actions/ActionDestroy.cs" id="18_8bg1j"]
+[ext_resource type="PackedScene" uid="uid://bbi1kly547t6p" path="res://Playground/Prefabs/ladder_big.tscn" id="19_o6gjg"]
+[ext_resource type="PackedScene" uid="uid://byuup2ujox6f4" path="res://Playground/Prefabs/catapult.tscn" id="23_tubq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7uegj"]
+size = Vector2(58, 111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h75vf"]
+size = Vector2(11, 95)
+
+[node name="Level" type="Node2D"]
+
+[node name="Blocs" type="Node2D" parent="."]
+
+[node name="BlocGrass" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(59, 470)
+
+[node name="Bloc" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(59, 590)
+
+[node name="BlocGrass2" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(178, 470)
+
+[node name="Bloc2" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(178, 590)
+
+[node name="BlocGrass3" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(299, 470)
+
+[node name="Bloc3" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(299, 591)
+
+[node name="BlocGrass4" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(418, 470)
+
+[node name="Bloc4" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(418, 591)
+
+[node name="BlocGrass5" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(538, 470)
+
+[node name="Bloc5" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(538, 591)
+
+[node name="BlocGrass6" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(657, 470)
+
+[node name="Bloc6" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(657, 591)
+
+[node name="BlocGrass7" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(777, 350)
+
+[node name="Bloc7" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(778, 592)
+
+[node name="Bloc33" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(777, 472)
+
+[node name="BlocGrass8" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(897, 472)
+
+[node name="Bloc8" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(897, 592)
+
+[node name="BlocGrass9" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1016, 472)
+
+[node name="Bloc9" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1016, 593)
+
+[node name="BlocGrass10" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1135, 472)
+
+[node name="Bloc10" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1135, 593)
+
+[node name="BlocGrass11" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1256, 472)
+
+[node name="Bloc11" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1256, 594)
+
+[node name="BlocGrass12" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1375, 472)
+
+[node name="Bloc12" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1375, 594)
+
+[node name="BlocGrass13" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1493, 110)
+
+[node name="Bloc13" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1495, 594)
+
+[node name="Bloc34" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1495, 474)
+
+[node name="Bloc35" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1494, 354)
+
+[node name="Bloc36" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1493, 232)
+
+[node name="BlocGrass14" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1614, 473)
+
+[node name="Bloc14" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1614, 594)
+
+[node name="BlocGrass15" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1735, 474)
+
+[node name="Bloc15" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1735, 595)
+
+[node name="BlocGrass16" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1854, 474)
+
+[node name="Bloc16" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1854, 595)
+
+[node name="BlocGrass17" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(-898, 467)
+
+[node name="Bloc17" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-898, 588)
+
+[node name="BlocGrass18" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(-779, 467)
+
+[node name="Bloc18" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-779, 588)
+
+[node name="BlocGrass19" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(-658, 467)
+
+[node name="Bloc19" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-658, 589)
+
+[node name="BlocGrass20" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(-539, 467)
+
+[node name="Bloc20" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-539, 589)
+
+[node name="BlocGrass21" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(-419, 467)
+
+[node name="Bloc21" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-419, 589)
+
+[node name="BlocGrass22" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(-300, 467)
+
+[node name="Bloc22" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-300, 589)
+
+[node name="Bloc23" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-179, 590)
+
+[node name="BlocGrass24" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(-60, 470)
+
+[node name="Bloc24" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(-60, 590)
+
+[node name="BlocGrass25" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(1976, 474)
+
+[node name="Bloc25" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(1976, 595)
+
+[node name="BlocGrass26" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(2095, 474)
+
+[node name="Bloc26" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(2095, 595)
+
+[node name="BlocGrass27" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(2216, 475)
+
+[node name="Bloc27" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(2216, 596)
+
+[node name="BlocGrass28" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(2335, 475)
+
+[node name="Bloc28" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(2335, 596)
+
+[node name="BlocGrass29" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(2455, 475)
+
+[node name="Bloc29" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(2455, 596)
+
+[node name="BlocGrass30" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(2574, 475)
+
+[node name="Bloc30" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(2574, 596)
+
+[node name="BlocGrass31" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(2695, 476)
+
+[node name="Bloc31" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(2695, 597)
+
+[node name="BlocGrass32" parent="Blocs" instance=ExtResource("1_rfam5")]
+position = Vector2(2814, 476)
+
+[node name="Bloc32" parent="Blocs" instance=ExtResource("2_n5sba")]
+position = Vector2(2814, 597)
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Spikes" parent="Objects" instance=ExtResource("3_sns7q")]
+position = Vector2(-180, 469)
+
+[node name="Player" parent="." instance=ExtResource("4_2yav0")]
+position = Vector2(298, 411)
+
+[node name="SimpleMove" type="Node2D" parent="Player"]
+script = ExtResource("5_h3qou")
+
+[node name="ItemGun" type="Sprite2D" parent="Player"]
+position = Vector2(69, -68)
+texture = ExtResource("6_8vhot")
+
+[node name="Node2D" type="Node2D" parent="Player/ItemGun"]
+position = Vector2(70, -6)
+
+[node name="Shooter" type="Node2D" parent="Player/ItemGun" node_paths=PackedStringArray("spawnPosition")]
+script = ExtResource("7_tj5hi")
+keyName = "shoot"
+spawnPosition = NodePath("../Node2D")
+bulletToSpawn = ExtResource("8_ggb5x")
+shotPower = 100000.0
+
+[node name="FlipDirection" type="Node2D" parent="Player"]
+script = ExtResource("5_ltuqa")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(571, 320)
+
+[node name="Follow" type="Node2D" parent="Camera2D" node_paths=PackedStringArray("target")]
+position = Vector2(-571, -320)
+script = ExtResource("6_bmhri")
+target = NodePath("../../Player")
+
+[node name="Demos" type="Node2D" parent="."]
+
+[node name="TileCog" type="Sprite2D" parent="Demos"]
+position = Vector2(774, 474)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_t1lhb")
+
+[node name="AutoRotate" type="Node2D" parent="Demos/TileCog"]
+script = ExtResource("10_n11lv")
+rotationSpeed = 1.0
+
+[node name="ItemArrow" type="Sprite2D" parent="Demos"]
+position = Vector2(58, 161)
+texture = ExtResource("7_msmbw")
+
+[node name="AutoMove" type="Node2D" parent="Demos/ItemArrow"]
+script = ExtResource("8_lxjqk")
+direction = Vector2(10, 0)
+
+[node name="DestroyAfterDelay" type="Node2D" parent="Demos/ItemArrow"]
+script = ExtResource("11_dmxtf")
+delay = 5.0
+
+[node name="SpawnPos" type="Node2D" parent="Demos"]
+position = Vector2(446, 191)
+
+[node name="PosA" type="Node2D" parent="Demos"]
+position = Vector2(-306, 332)
+
+[node name="PosB" type="Node2D" parent="Demos"]
+position = Vector2(-899, 332)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Demos"]
+position = Vector2(-603, 332)
+
+[node name="CharacterRoundPurple" type="Sprite2D" parent="Demos/CharacterBody2D"]
+position = Vector2(1, 17)
+texture = ExtResource("11_o05i6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Demos/CharacterBody2D"]
+position = Vector2(-1, 15.5)
+shape = SubResource("RectangleShape2D_7uegj")
+
+[node name="Patrol" type="Node2D" parent="Demos/CharacterBody2D" node_paths=PackedStringArray("points")]
+script = ExtResource("12_bxe24")
+points = [NodePath("../../PosA"), NodePath("../../PosB")]
+
+[node name="Area2D" type="Area2D" parent="Demos/CharacterBody2D"]
+script = ExtResource("17_8qxhm")
+actionToCall = "ActionDestroy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Demos/CharacterBody2D/Area2D"]
+position = Vector2(-41, 12)
+shape = SubResource("RectangleShape2D_h75vf")
+
+[node name="ActionDestroy" type="Node2D" parent="Demos/CharacterBody2D"]
+script = ExtResource("18_8bg1j")
+
+[node name="RigidBody2D" parent="Demos" instance=ExtResource("13_iursp")]
+
+[node name="StoneSpawner" type="Node2D" parent="Demos"]
+
+[node name="SpawnRepeating" type="Node2D" parent="Demos/StoneSpawner" node_paths=PackedStringArray("spawnPosition")]
+script = ExtResource("14_mq26o")
+delay = 2.0
+spawnPosition = NodePath("..")
+sceneToSpawn = ExtResource("13_iursp")
+
+[node name="LadderBig" parent="Demos" instance=ExtResource("19_o6gjg")]
+position = Vector2(1387, 411)
+
+[node name="Catapult" parent="Demos" node_paths=PackedStringArray("player") instance=ExtResource("23_tubq5")]
+position = Vector2(1610, 412)
+player = NodePath("../../Player")

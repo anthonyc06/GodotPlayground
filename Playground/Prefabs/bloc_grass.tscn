@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2tofnhf8kxdy"]
+
+[ext_resource type="Texture2D" uid="uid://dyr8u410ng3wj" path="res://Playground/2D Assets/tile_grass.png" id="1_hi6ft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n02h8"]
+size = Vector2(119, 118)
+
+[node name="BlocGrass" type="StaticBody2D"]
+
+[node name="TileGrass" type="Sprite2D" parent="."]
+texture = ExtResource("1_hi6ft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_n02h8")

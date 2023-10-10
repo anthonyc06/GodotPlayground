@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg6jy830b0gr2"]
+
+[ext_resource type="Texture2D" uid="uid://cirx1ue5net7u" path="res://Playground/2D Assets/tile_spikes.png" id="1_6usqa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0s2x"]
+size = Vector2(118, 56)
+
+[node name="Spikes" type="StaticBody2D"]
+
+[node name="TileSpikes" type="Sprite2D" parent="."]
+texture = ExtResource("1_6usqa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 32)
+shape = SubResource("RectangleShape2D_w0s2x")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbi1kly547t6p"]
+
+[ext_resource type="PackedScene" uid="uid://dofuqk65enotv" path="res://Playground/Prefabs/ladder_small.tscn" id="1_5yu57"]
+
+[node name="LadderBig" type="Node2D"]
+
+[node name="LadderSmall" parent="." instance=ExtResource("1_5yu57")]
+
+[node name="LadderSmall2" parent="." instance=ExtResource("1_5yu57")]
+position = Vector2(0, -120)
+
+[node name="LadderSmall3" parent="." instance=ExtResource("1_5yu57")]
+position = Vector2(0, -241)

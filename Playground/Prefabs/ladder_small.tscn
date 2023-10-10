@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dofuqk65enotv"]
+
+[ext_resource type="Script" path="res://addons/playground/Scripts/Climbable.cs" id="1_ea5yn"]
+[ext_resource type="Texture2D" uid="uid://bokhhsjyhj02w" path="res://Playground/2D Assets/tile_ladder.png" id="2_yr6lc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4tfj"]
+size = Vector2(90, 121)
+
+[node name="LadderSmall" type="Area2D"]
+script = ExtResource("1_ea5yn")
+speed = 6.0
+
+[node name="TileLadder" type="Sprite2D" parent="."]
+position = Vector2(-1, -61)
+texture = ExtResource("2_yr6lc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -61)
+shape = SubResource("RectangleShape2D_u4tfj")

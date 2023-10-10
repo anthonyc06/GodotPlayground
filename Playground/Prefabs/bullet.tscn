@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b60ju8pqirm7n"]
+
+[ext_resource type="Texture2D" uid="uid://djiyqno3autm1" path="res://Playground/2D Assets/effect_blast.png" id="1_u6m2u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7l7jc"]
+radius = 33.0151
+
+[node name="Bullet" type="RigidBody2D"]
+
+[node name="EffectBlast" type="Sprite2D" parent="."]
+position = Vector2(-1, -3)
+texture = ExtResource("1_u6m2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7l7jc")
